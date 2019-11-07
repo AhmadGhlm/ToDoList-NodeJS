@@ -1,12 +1,9 @@
 const express = require("express");
-const Sequelize = require("sequelize");
 
 const app = express();
 const port = 4000;
-const db = new Sequelize("todolist", "todolist", "123", {
-  host: "localhost",
-  dialect: "postgres"
-});
+
+const db = require("./config/database");
 
 db.authenticate()
   .then(() => {
