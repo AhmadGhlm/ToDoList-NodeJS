@@ -1,0 +1,20 @@
+{
+  "name": "ToDoList-NodeJS",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AhmadGDev/ToDoList-NodeJS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AhmadGDev/ToDoList-NodeJS/issues"
+  },
+  "homepage": "https://github.com/AhmadGDev/ToDoList-NodeJS#readme"
+}
