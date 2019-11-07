@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/AhmadGDev/ToDoList-NodeJS/issues"
   },
-  "homepage": "https://github.com/AhmadGDev/ToDoList-NodeJS#readme"
+  "homepage": "https://github.com/AhmadGDev/ToDoList-NodeJS#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
