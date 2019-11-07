@@ -69,10 +69,15 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", (req, res) => {
-  Item.findAll().then(items => {
-    console.log("All items:", JSON.stringify(items, null, 4));
-  });
-  res.send("POST request successfully !");
+  Item.create({
+    item: req.body.item
+  })
+    .then(() => {
+      res.redirect("/");
+    })
+    .catch(err => {
+      console.log(err);
+    });
 });
 
 app.listen(port);
