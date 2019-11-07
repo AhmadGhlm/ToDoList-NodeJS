@@ -18,6 +18,7 @@ db.authenticate()
     console.error("Unable to connect to the database:", err);
   });
 
+app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static("public"));
 
@@ -83,7 +84,8 @@ app.post("/", (req, res) => {
 });
 
 app.post("/update-item", (req, res) => {
-  res.send("Test updated successfull");
+  console.log(req.body.itemUpdated);
+  res.send("Success");
 });
 
 app.listen(port);
