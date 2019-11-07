@@ -1,5 +1,6 @@
 document.appEventListener("click", function(e) {
   if (e.target.classList.contains("edit-me")) {
-    alert("Click OK on Edit button");
+    let userInput = prompt("Veuillez entre votre nouvelle tâche ...");
+    console.log(userInput);
   }
 });
