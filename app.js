@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
         <form>
           <div class="d-flex align-items-center">
             <input autofocus autocomplete="off" class="form-control mr-3" type="text" style="flex: 1;">
-            <button class="btn btn-primary">Ajouter la tâche</button>
+            <button class="btn btn-success">Ajouter la tâche</button>
           </div>
         </form>
       </div>
@@ -29,21 +29,21 @@ app.get("/", (req, res) => {
         <li class="list-group-item list-group-item-action d-flex align-items-center justify-content-between">
           <span class="item-text">Aller faire des courses</span>
           <div>
-            <button class="edit-me btn btn-secondary btn-sm mr-1">Modifier</button>
+            <button class="edit-me btn btn-warning btn-sm mr-1">Modifier</button>
             <button class="delete-me btn btn-danger btn-sm">Supprimer</button>
           </div>
         </li>
         <li class="list-group-item list-group-item-action d-flex align-items-center justify-content-between">
           <span class="item-text">Faire la session moto</span>
           <div>
-            <button class="edit-me btn btn-secondary btn-sm mr-1">Modifier</button>
+            <button class="edit-me btn btn-warning btn-sm mr-1">Modifier</button>
             <button class="delete-me btn btn-danger btn-sm">Supprimer</button>
           </div>
         </li>
         <li class="list-group-item list-group-item-action d-flex align-items-center justify-content-between">
           <span class="item-text">Manger des gâteaux</span>
           <div>
-            <button class="edit-me btn btn-secondary btn-sm mr-1">Modifier</button>
+            <button class="edit-me btn btn-warning btn-sm mr-1">Modifier</button>
             <button class="delete-me btn btn-danger btn-sm">Supprimer</button>
           </div>
         </li>
