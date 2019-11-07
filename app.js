@@ -3,6 +3,8 @@ const app = express();
 
 const port = 4000;
 
+app.use(express.urlencoded({ extended: false }));
+
 app.get("/", (req, res) => {
   res.send(`<!DOCTYPE html>
   <html>
@@ -17,9 +19,9 @@ app.get("/", (req, res) => {
       <h1 class="display-4 text-center py-1">To-Do App</h1>
       
       <div class="jumbotron p-3 shadow-sm">
-        <form>
+        <form action="/" method="POST">
           <div class="d-flex align-items-center">
-            <input autofocus autocomplete="off" class="form-control mr-3" type="text" style="flex: 1;">
+            <input name="item" autofocus autocomplete="off" class="form-control mr-3" type="text" style="flex: 1;">
             <button class="btn btn-success">Ajouter la tâche</button>
           </div>
         </form>
@@ -56,6 +58,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", (req, res) => {
+  console.log(req.body.item);
   res.send("POST request successfully !");
 });
 
