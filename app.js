@@ -82,4 +82,8 @@ app.post("/", (req, res) => {
     });
 });
 
+app.post("/update-item", (req, res) => {
+  res.send("Test updated successfull");
+});
+
 app.listen(port);
