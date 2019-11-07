@@ -3,9 +3,13 @@ const express = require("express");
 const app = express();
 const port = 4000;
 
+// Models
 const Item = require("./models/Item");
+
+// Database
 const db = require("./config/database");
 
+// Test connection database
 db.authenticate()
   .then(() => {
     console.log("Connection has been established successfully.");
@@ -17,6 +21,10 @@ db.authenticate()
 app.use(express.urlencoded({ extended: false }));
 
 app.get("/", (req, res) => {
+  Item.findAll().then(items => {
+    console.log(items);
+  });
+
   res.send(`<!DOCTYPE html>
   <html>
   <head>
