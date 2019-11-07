@@ -55,7 +55,7 @@ app.get("/", (req, res) => {
             <span class="item-text">${item.dataValues.item}</span>
             <div>
               <button data-id="${item.dataValues.id}" class="edit-me btn btn-warning btn-sm mr-1">Modifier</button>
-              <button class="delete-me btn btn-danger btn-sm">Supprimer</button>
+              <button data-id="${item.dataValues.id}" class="delete-me btn btn-danger btn-sm">Supprimer</button>
             </div>
           </li>`;
           })
@@ -92,6 +92,14 @@ app.post("/update-item", (req, res) => {
       }
     }
   );
+});
+
+app.post("/delete-item", (req, res) => {
+  Item.destroy({
+    where: {
+      id: req.body.id
+    }
+  });
 });
 
 app.listen(port);
