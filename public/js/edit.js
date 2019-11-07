@@ -1,4 +1,4 @@
-document.appEventListener("click", function(e) {
+document.addEventListener("click", function(e) {
   // Delete Button
   if (e.target.classList.contains("delete-me")) {
     if (confirm("Do you want really delete this item ?")) {
