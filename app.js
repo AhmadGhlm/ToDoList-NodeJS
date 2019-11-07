@@ -44,29 +44,23 @@ app.get("/", (req, res) => {
         </div>
         
         <ul class="list-group pb-5">
-          <li class="list-group-item list-group-item-action d-flex align-items-center justify-content-between">
-            <span class="item-text">Aller faire des courses</span>
+
+        ${items
+
+          .map(function(item) {
+            return `
+            <li class="list-group-item list-group-item-action d-flex align-items-center justify-content-between">
+            <span class="item-text">${item.dataValues.item}</span>
             <div>
               <button class="edit-me btn btn-warning btn-sm mr-1">Modifier</button>
               <button class="delete-me btn btn-danger btn-sm">Supprimer</button>
             </div>
-          </li>
-          <li class="list-group-item list-group-item-action d-flex align-items-center justify-content-between">
-            <span class="item-text">Faire la session moto</span>
-            <div>
-              <button class="edit-me btn btn-warning btn-sm mr-1">Modifier</button>
-              <button class="delete-me btn btn-danger btn-sm">Supprimer</button>
-            </div>
-          </li>
-          <li class="list-group-item list-group-item-action d-flex align-items-center justify-content-between">
-            <span class="item-text">Manger des gâteaux</span>
-            <div>
-              <button class="edit-me btn btn-warning btn-sm mr-1">Modifier</button>
-              <button class="delete-me btn btn-danger btn-sm">Supprimer</button>
-            </div>
-          </li>
+          </li>`;
+          })
+
+          .join("")}
+
         </ul>
-        
       </div>
       
     </body>
