@@ -1,7 +1,7 @@
 const express = require("express");
 
 const app = express();
-const port = 4000;
+const port = port;
 
 // Models
 const Item = require("./models/Item");
